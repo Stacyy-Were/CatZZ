@@ -1,0 +1,28 @@
+body {
+    background-color: #E34BCF;
+
+}
+
+main {
+    width:100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+section {
+    border-radius: 60px;
+    background: linear-gradient(315deg, #D417BB, #8C067A);
+    box-shadow:  -23px -23px 46px #E26D5A,
+             23px 23px 46px #d8cfaf;
+    padding:20px;
+    text-align: center;
+
+}
+
+#purr {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
