@@ -1,28 +1,138 @@
 body {
-    background-color: #E34BCF;
-
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #ffe6f2, #ffccf9);
+  color: #4b0036;
+  padding: 30px;
+  text-align: center;
 }
 
 main {
-    width:100%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 h2 {
-    text-align: center;
+  color: #d63384;
+  border-bottom: 2px dashed #ffb3d9;
+  padding-bottom: 5px;
 }
 
 section {
-    border-radius: 60px;
-    background: linear-gradient(315deg, #D417BB, #8C067A);
-    box-shadow:  -23px -23px 46px #E26D5A,
-             23px 23px 46px #d8cfaf;
-    padding:20px;
-    text-align: center;
-
+  border-radius: 30px;
+  background: linear-gradient(145deg, #ffc1e3, #ffe3f7);
+  box-shadow: -10px -10px 20px #ffffff, 10px 10px 20px #ffb3d9;
+  padding: 30px;
+  margin: 40px 0;
+  text-align: center;
 }
 
-#purr {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+#purr img {
+  width: 250px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff99cc;
+  transition: transform 0.3s ease;
+}
+#purr img:hover {
+  transform: scale(1.05);
+}
+
+ul, ol {
+  list-style-position: inside;
+  padding: 0;
+  margin: 15px auto;
+  display: inline-block;
+  text-align: left;
+}
+
+figure {
+  margin: 20px 0;
+}
+
+figure img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ffaad4;
+}
+
+figcaption {
+  font-style: italic;
+  color: #b3005e;
+  margin-top: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset {
+  border: 2px solid #ffb6c1;
+  background-color: #fff0f5;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ffb3d9;
+  width: 90%;
+  max-width: 400px;
+  font-family: inherit;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #6b004e;
+}
+footer a {
+  color: #d63384;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.playlist-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dancing-cat {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.left-cat {
+  transform: scaleX(-1); /* flips the cat to face inward */
 }
