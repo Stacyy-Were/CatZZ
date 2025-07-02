@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>💕 Cats Galore 💕</title>
+  <link rel="icon" type="image/png" href="images/67094c82-c7f9-4122-b55e-ddf4d137df86.jpeg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fun and interactive cat-themed webpage featuring cat photos, lists, a random cat fact generator, and a cat vibes playlist.">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
-    <section>
+
       <h2>🌸 Cat Photos 🌸</h2>
       <div id="purr">
-        <img src="images/purr.jpeg" id="cat" alt="A cute kitty" width="100" height="auto"/>
+        <img src="images/purr.jpeg" id="cat" alt="A cute kitty" />
       </div>
-    </section>
+
 
     <section>
       <h2>🌸 Cat Lists 🌸</h2>
@@ -22,6 +26,7 @@
         <li>Laser pointers</li>
         <li>Lasagna</li>
       </ul>
+
       <figure>
         <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="Lasagna">
         <figcaption>Cats <em>love</em> lasagna.</figcaption>
@@ -33,6 +38,7 @@
         <li>Thunder</li>
         <li>Other cats</li>
       </ol>
+
       <figure>
         <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Field cats">
         <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
@@ -40,29 +46,49 @@
     </section>
 
     <section>
-          <h2>🐱 Upload Your Cat</h2>
-          <form action="upload.php" method="POST" enctype="multipart/form-data">
-            <fieldset>
-              <legend>Is your cat an indoor or outdoor cat?</legend>
-              <label><input type="radio" name="indoor_outdoor" value="indoor" checked> Indoor</label>
-              <label><input type="radio" name="indoor_outdoor" value="outdoor"> Outdoor</label>
-            </fieldset>
-          
-            <fieldset>
-              <legend>What's your cat's personality?</legend>
-              <label><input type="checkbox" name="personality[]" value="loving"> Loving</label>
-              <label><input type="checkbox" name="personality[]" value="lazy"> Lazy</label>
-              <label><input type="checkbox" name="personality[]" value="energetic"> Energetic</label>
-            </fieldset>
-          
-            <input type="file" name="cat_photo" accept="image/*" required>
-            <button type="submit">Submit Your Cat</button>
-          </form>
-        </section>
+      <h2>🐾 Random Cat Fact Generator</h2>
+      <p id="cat-fact" style="font-style: italic; margin: 20px;"></p>
+      <button onclick="showCatFact()">Show Me a Cat Fact!</button>
+    </section>
+
+
+    <section>
+      <h2>🎵 Cat Vibes Playlist 🎵</h2>
+      <div class="playlist-container">
+        <img src="https://media.tenor.com/PbbHDS_y66QAAAAM/happy-birthday.gif" alt="Dancing cat" class="dancing-cat left-cat">
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7MMWli14BcIP2WUgPg81kQ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <img src="https://media.tenor.com/0Q5IZ6e9pC8AAAAM/cat-cute-cat.gif" alt="Dancing cat" class="dancing-cat right-cat">
+      </div>
+    </section>
+
+
   </main>
 
   <footer>
-    <p>💖 Made with love - <a href="https://www.freecodecamp.org">freeCodeCamp</a></p>
+    <p>💖 Made with love for cats - <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a></p>
   </footer>
+
+  <script>
+  const catFacts = [
+    "Cats sleep for around 13–16 hours a day.",
+    "A group of cats is called a clowder.",
+    "Cats can rotate their ears 180 degrees.",
+    "A cat has been the mayor of an Alaskan town for 20 years.",
+    "Cats have over 20 muscles in each ear.",
+    "A cat can jump up to 6 times its length.",
+    "Whiskers are not just for cuteness—they help cats detect changes in air.",
+    "Cats were worshipped in ancient Egypt.",
+    "Adult cats only meow at humans, not other cats.",
+    "A house cat’s genome is 95.6% tiger."
+  ];
+
+  function showCatFact() {
+    const fact = catFacts[Math.floor(Math.random() * catFacts.length)];
+    document.getElementById("cat-fact").textContent = fact;
+  }
+</script>
+
 </body>
 </html>
